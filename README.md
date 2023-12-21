@@ -111,4 +111,5 @@ Developed by:
 ### DOWN COUNTER:
 ![Screenshot 2023-12-21 172943](https://github.com/MathiyazhaganDhanapal/Exp-7-Synchornous-counters-/assets/145981115/87ed33b1-0ac3-456c-94fb-5c6a1c2b4a97)
 
-### RESULTS 
+### RESULTS:
+By this we have verified the truth table of 4-bit up-counter using verilog.
