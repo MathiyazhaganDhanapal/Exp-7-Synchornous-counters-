@@ -1,4 +1,7 @@
-# Exp-6-Synchornous-counters - up counter and down counter 
+## Name:D.MATHIYAZHAGAN.
+## Reg:23013685
+
+## Exp-6-Synchornous-counters - up counter and down counter 
 ### AIM: To implement 4 bit up and down counters and validate  functionality.
 ### HARDWARE REQUIRED:  – PC, Cyclone II , USB flasher
 ### SOFTWARE REQUIRED:   Quartus prime
@@ -45,44 +48,67 @@ This type of counter is normally referred to as a Down Counter, (CTD). In a bina
 
 
 4-bit Count Down Counter
-### Procedure
-/* write all the steps invloved */
+### Procedure:
 
 
 
-### PROGRAM 
-/*
+
+### PROGRAM:
+
+
+### UP COUNTER:
+~~~~
+module upCounters(clk, A);
+input clk;
+output reg [2:0]A;
+always @(posedge clk)
+begin
+A[2]=(((A[0])&(A[1]))^A[2]);
+A[1]=(A[0])^A[1];
+A[0]=A[0]^1;
+end
+endmodule
+~~~~
+
+### DOWN COUNTER:
+~~~~
+module downCounters(clk,A);
+input clk;
+output reg [2:0]A;
+always @(posedge clk)
+begin
+A[2]=(((~A[0])&(~A[1]))^A[2]);
+A[1]=(~A[0])^A[1];
+A[0]=1^A[0];
+end
+endmodule
+~~~~
 Program for flipflops  and verify its truth table in quartus using Verilog programming.
 Developed by: 
-RegisterNumber:  
-*/
+
+### RTL LOGIC:
+
+### UP COUNTER:
+![Screenshot 2023-12-21 172812](https://github.com/MathiyazhaganDhanapal/Exp-7-Synchornous-counters-/assets/145981115/10b9f9e2-e30f-47fd-85b5-c33a5b9d8d0b)
+
+### DOWN COUNTER:  
+![Screenshot 2023-12-21 172850](https://github.com/MathiyazhaganDhanapal/Exp-7-Synchornous-counters-/assets/145981115/d57eedb7-ae5d-4f18-b8b9-d901c61d375b)
+
+### TIMING DIGRAMS FOR COUNTER:
+
+### UP COUNTER:
+![Screenshot 2023-12-21 172905](https://github.com/MathiyazhaganDhanapal/Exp-7-Synchornous-counters-/assets/145981115/5a6e0e97-7e4a-43c1-bed9-69d593c74ba4)
+
+### DOWN COUNTER:  
+![Screenshot 2023-12-21 172914](https://github.com/MathiyazhaganDhanapal/Exp-7-Synchornous-counters-/assets/145981115/4fbec307-c850-4c57-a24d-b2e42b3477ff)
 
 
+### TRUTH TABLE:
 
+### UP COUNTER:
+![Screenshot 2023-12-21 172927](https://github.com/MathiyazhaganDhanapal/Exp-7-Synchornous-counters-/assets/145981115/08b5f60e-3642-44f5-812e-2e0d25bc2676)
 
-
-
-### RTL LOGIC UP COUNTER AND DOWN COUNTER  
-
-
-
-
-
-
-
-
-
-### TIMING DIGRAMS FOR COUNTER  
-
-
-
-
-
-### TRUTH TABLE 
-
-
-
-
-
+### DOWN COUNTER:
+![Screenshot 2023-12-21 172943](https://github.com/MathiyazhaganDhanapal/Exp-7-Synchornous-counters-/assets/145981115/87ed33b1-0ac3-456c-94fb-5c6a1c2b4a97)
 
 ### RESULTS 
